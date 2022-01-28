@@ -1,7 +1,7 @@
 /* USER VARIABLES SECTION */
 
 :root {
-  --accent: orange;
+  --accent: #2d496a;
   --theme-green: #40ae2a;
   --theme-red-accent: #c32324;
   --theme-white: #fff;
@@ -145,7 +145,7 @@ body {
   height: 14px;
   margin-top: -7px;
   margin-left: -4px;
-  background: url(../images/white-arrow.svg);
+  background: url(../images/white-arrow.svg) no-repeat;
   position: absolute;
   top: 50%;
   left: 50%;
