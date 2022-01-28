@@ -23,4 +23,8 @@
   .cars-item {
     padding: 16px;
   }
+
+  .cars-item__char {
+    font-size: 16px;
+  }
 }
