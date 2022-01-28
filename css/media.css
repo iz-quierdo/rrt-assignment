@@ -58,14 +58,6 @@
 }
 
 @media (max-width: 768px) {
-  .slider {
-    height: 200px;
-  }
-
-  .slider__image {
-    height: 200px;
-  }
-
   .cars-item {
     padding: 16px;
   }
