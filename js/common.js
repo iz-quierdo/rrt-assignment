@@ -34,16 +34,4 @@ document.addEventListener("DOMContentLoaded", function () {
       prevEl: ".swiper-prev",
     },
   });
-
-  const carItemsSlides1 = new Swiper(".car-item__slider", {
-    direction: "horizontal",
-    slidesPerView: 1,
-
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-
-    navigation: {},
-  });
 });
