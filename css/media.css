@@ -1,4 +1,9 @@
-/* md <= Large (lg) */
+@media (max-width: 1400px) {
+  .cars-item__car {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 1024px) {
   .cars-item {
     padding: 5px;
@@ -6,12 +11,16 @@
   .cars-item__img {
     height: 250px;
   }
+
+  .cars-item__char {
+    padding-left: 18px;
+    font-size: 12px;
+    background-size: 16px;
+  }
 }
 
-/* sm <= Medium (md) */
 @media (max-width: 768px) {
-}
-
-/* xs <= Small (sm) */
-@media (max-width: 320px) {
+  .cars-item {
+    padding: 16px;
+  }
 }
