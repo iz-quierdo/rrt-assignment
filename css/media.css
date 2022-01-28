@@ -1,0 +1,14 @@
+/* md <= Large (lg) */
+@media (max-width: 1024px) {
+  .cars-item__img {
+    height: 250px;
+  }
+}
+
+/* sm <= Medium (md) */
+@media (max-width: 768px) {
+}
+
+/* xs <= Small (sm) */
+@media (max-width: 320px) {
+}

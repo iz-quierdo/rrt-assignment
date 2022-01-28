@@ -1,0 +1,295 @@
+/* USER VARIABLES SECTION */
+
+:root {
+  --accent: orange;
+  --theme-green: #40ae2a;
+  --theme-red-accent: #c32324;
+  --theme-white: #fff;
+  --text: #343a40;
+  --regular-text: 16px;
+  --lineheight: 1.65;
+  --userfont: lato, sans-serif;
+  --systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  --swiper-theme-color: #2d496a;
+  --swiper-pagination-bullet-inactive-color: #2d496a;
+  --swiper-pagination-bullet-inactive-opacity: 0.5;
+}
+
+/* BOOTSTRAP SETTINGS SECTION */
+
+/* gutter 20px (10px + 10px). Comment this code for default gutter start at 1.5rem (24px) wide. */
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  --bs-gutter-x: 0.625rem;
+}
+.row,
+.row > * {
+  --bs-gutter-x: 2.25rem;
+}
+
+/* FONTS LOAD SECTION */
+
+@font-face {
+  src: url("../fonts/latolight.woff2") format("woff2");
+  font-family: "lato";
+  font-weight: 300;
+  font-style: light;
+}
+@font-face {
+  src: url("../fonts/latoregular.woff2") format("woff2");
+  font-family: "lato";
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  src: url("../fonts/latomedium.woff2") format("woff2");
+  font-family: "lato";
+  font-weight: 500;
+  font-style: medium;
+}
+@font-face {
+  src: url("../fonts/latosemibold.woff2") format("woff2");
+  font-family: "lato";
+  font-weight: 600;
+  font-style: semibold;
+}
+@font-face {
+  src: url("../fonts/latobold.woff2") format("woff2");
+  font-family: "lato";
+  font-weight: 700;
+  font-style: bold;
+}
+
+/* GENERAL CSS SETTINGS */
+
+::placeholder {
+  color: #555;
+}
+::selection {
+  background-color: var(--accent);
+  color: #fff;
+}
+input,
+textarea {
+  outline: none;
+}
+input:focus:required:invalid,
+textarea:focus:required:invalid {
+  border-color: red;
+}
+input:required:valid,
+textarea:required:valid {
+  border-color: green;
+}
+
+body {
+  font-family: var(--userfont);
+  font-size: var(--regular-text);
+  line-height: var(--lineheight);
+  color: var(--text);
+  min-width: 320px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  overflow: hidden;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero > .swiper {
+  padding-bottom: 50px;
+}
+
+.swiper-prev,
+.swiper-next {
+  margin-top: -30px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: rgba(64, 174, 42, 0.5);
+  position: absolute;
+  z-index: 1000;
+}
+
+.swiper-prev {
+  left: -5px;
+  top: 50%;
+}
+
+.swiper-next {
+  right: -5px;
+  top: 50%;
+}
+
+.swiper-next::after,
+.swiper-prev::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 14px;
+  margin-top: -7px;
+  margin-left: -4px;
+  background: url(../images/white-arrow.svg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.swiper-prev::after {
+  transform: rotate(180deg);
+}
+
+.swiper-prev.swiper-button-disabled,
+.swiper-next.swiper-button-disabled {
+  background: rgba(216, 217, 219, 0.5);
+}
+
+/* USER STYLES */
+.image {
+  max-width: 100%;
+  margin-bottom: var(--bs-gutter-x);
+  border-radius: 4px;
+}
+
+.accent {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.cars-wrapper {
+  margin: 10px auto;
+}
+
+.cars-item {
+  width: 330px;
+  padding: 16px;
+  background: #f8f9fa;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 4px rgba(33, 37, 41, 0.12);
+  border-radius: 4px;
+}
+
+.cars-item__img {
+  width: 100%;
+  height: 150px;
+  border-radius: 4px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cars-item__header {
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.cars-item__old-price {
+  margin-right: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 0;
+  text-decoration-line: line-through;
+  color: rgba(130, 138, 145, 0.5);
+}
+
+.cars-item__new-price {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 0;
+  color: var(--theme-red-accent);
+}
+
+.cars-item__button {
+  background: var(--theme-green);
+  color: var(--theme-white);
+  border: none;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.cars-item__char {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  padding-left: 30px;
+}
+
+.cars-item__char--engine {
+  background: url(../images/char-icons/engine.svg) no-repeat left center;
+}
+
+.cars-item__char--drive {
+  background: url(../images/char-icons/drive.svg) no-repeat left center;
+}
+
+.cars-item__char--fuel {
+  background: url(../images/char-icons/fuel.svg) no-repeat left center;
+}
+
+.cars-item__char--mileage {
+  background: url(../images/char-icons/mileage.svg) no-repeat left center;
+}
+
+.cars-item__char--owners {
+  background: url(../images/char-icons/owners.svg) no-repeat left center;
+}
+
+.cars-item__char--transmission {
+  background: url(../images/char-icons/transmission.svg) no-repeat left center;
+}
+
+.cars-item__salon {
+  font-weight: 300;
+  font-size: 16px;
+  border-top: 1px solid var(--text);
+}
+
+.icon {
+  position: relative;
+  cursor: pointer;
+  margin-right: 9px;
+}
+
+.icon:last-of-type {
+  margin-right: 0;
+}
+
+.favourite-icon::after {
+  content: url(../images/icons/favourite.svg);
+}
+
+.compare-icon::after {
+  content: url(../images/icons/compare.svg);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 36px;
+  cursor: pointer;
+  line-height: 1 !important;
+  text-align: left;
+  transition: color 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+}
