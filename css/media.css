@@ -5,6 +5,13 @@
 }
 
 @media (max-width: 1024px) {
+  .slider__label {
+    display: none;
+  }
+
+  .slider__check:checked + .slider__label + .slider__image {
+    opacity: 1;
+  }
   .cars-item {
     padding: 5px;
   }
@@ -51,6 +58,14 @@
 }
 
 @media (max-width: 768px) {
+  .slider {
+    height: 200px;
+  }
+
+  .slider__image {
+    height: 200px;
+  }
+
   .cars-item {
     padding: 16px;
   }

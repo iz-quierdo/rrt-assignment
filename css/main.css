@@ -189,9 +189,9 @@ body {
   width: 100%;
   height: 150px;
   border-radius: 4px;
-  background-position: center center;
+  background-position: left top;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 150px;
 }
 
 .cars-item__header {
@@ -293,4 +293,59 @@ body {
   line-height: 1 !important;
   text-align: left;
   transition: color 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+}
+
+.slider {
+  z-index: 100;
+  height: 150px;
+  position: relative;
+  padding-top: 120px;
+  text-align: center;
+}
+
+.slider__check {
+  z-index: 1000;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.slider__image {
+  z-index: -100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 150px;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  border-radius: 4px;
+  opacity: 0;
+}
+
+.slider__label {
+  cursor: pointer;
+  z-index: 1000;
+  overflow: hidden;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: var(--theme-white);
+  opacity: 0.5;
+  border-radius: 50%;
+  text-indent: -9999px;
+  margin-right: 15px;
+}
+
+.slider__label:last-of-type {
+  margin-right: 0;
+}
+
+.slider__check:checked + .slider__label + .slider__image {
+  opacity: 1;
+}
+
+/* Current */
+.slider__check:checked + .slider__label {
+  opacity: 1;
 }
