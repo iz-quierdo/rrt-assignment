@@ -1,5 +1,8 @@
 /* md <= Large (lg) */
 @media (max-width: 1024px) {
+  .cars-item {
+    padding: 5px;
+  }
   .cars-item__img {
     height: 250px;
   }

@@ -5,6 +5,7 @@
   --theme-green: #40ae2a;
   --theme-red-accent: #c32324;
   --theme-white: #fff;
+  --theme-light-bg: #f8f9fa;
   --text: #343a40;
   --regular-text: 16px;
   --lineheight: 1.65;
@@ -178,7 +179,7 @@ body {
 .cars-item {
   width: 330px;
   padding: 16px;
-  background: #f8f9fa;
+  background: var(--theme-light-bg);
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0px 2px 4px rgba(33, 37, 41, 0.12);
   border-radius: 4px;
