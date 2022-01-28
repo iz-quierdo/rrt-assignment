@@ -31,7 +31,7 @@
   }
 
   .swiper-next {
-    right: -30px;
+    right: -33px;
   }
 
   .swiper-prev.swiper-button-disabled,
@@ -46,7 +46,7 @@
     width: 20px;
     height: 30px;
     margin-top: -14px;
-    margin-left: -8px;
+    margin-left: -10px;
   }
 }
 
