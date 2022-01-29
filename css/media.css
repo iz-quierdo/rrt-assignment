@@ -5,6 +5,10 @@
 }
 
 @media (max-width: 1024px) {
+  .hero {
+    padding: 0 20px;
+  }
+
   .slider__label {
     display: none;
   }
@@ -34,11 +38,11 @@
   }
 
   .swiper-prev {
-    left: -33px;
+    left: -21px;
   }
 
   .swiper-next {
-    right: -33px;
+    right: -21px;
   }
 
   .swiper-prev.swiper-button-disabled,
